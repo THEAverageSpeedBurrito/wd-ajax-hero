@@ -23,7 +23,7 @@
       var $poster = $('<img class="poster">');
 
       $poster.attr({
-        src: movie.poster,
+        src: movie.Poster,
         alt: `${movie.poster} Poster`
       });
 
@@ -54,7 +54,26 @@
 
       $('.modal-trigger').leanModal();
     }
+    movies = [];
   };
 
   // ADD YOUR CODE HERE
+  $('#go').on('click', function(event) {
+    event.preventDefault();
+    var search = $('#search').val();
+    var url = 'http://www.omdbapi.com/?s=' + search;
+
+    if(search !== ''){
+      $.getJSON(url, function(data) {
+
+        for(var movie in data.Search){
+          movies.push(data.Search[movie]);
+        }
+
+        renderMovies();
+      });
+    }else{
+      Materialize.toast("Enter a movie title", 4000);
+    }
+  });
 })();
