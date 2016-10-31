@@ -3,7 +3,7 @@
 In this exercise, you're tasked with extending a web application to make Ajax calls to the OMDb API and update the DOM. To get started, fork and clone this repository.
 
 ## Surge URL
-[eb-ajaxhero.surge.sh](eb-ajaxhero.surge.sh)
+[eb-ajaxhero.surge.sh](http://eb-ajaxhero.surge.sh/)
 
 ## Search
 
