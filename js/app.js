@@ -14,11 +14,11 @@
 
       $title.attr({
         'data-position': 'top',
-        'data-tooltip': movie.title
+        'data-tooltip': movie.Title
       });
 
       $title.tooltip({ delay: 50, });
-      $title.text(movie.title);
+      $title.text(movie.Title);
 
       var $poster = $('<img class="poster">');
 
@@ -41,9 +41,9 @@
 
       var $modal = $(`<div id="${movie.id}" class="modal">`);
       var $modalContent = $('<div class="modal-content">');
-      var $modalHeader = $('<h4>').text(movie.title);
-      var $movieYear = $('<h6>').text(`Released in ${movie.year}`);
-      var $modalText = $('<p>').text(movie.plot);
+      var $modalHeader = $('<h4>').text(movie.Title);
+      var $movieYear = $('<h6>').text(`Released in ${movie.Year}`);
+      var $modalText = $('<p>').text(movie.Plot);
 
       $modalContent.append($modalHeader, $movieYear, $modalText);
       $modal.append($modalContent);
